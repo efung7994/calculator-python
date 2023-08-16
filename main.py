@@ -1,6 +1,8 @@
 import art
 import os
 
+print(art.logo)
+
 clear = lambda: os.system('cls')
 
 #Add
@@ -27,14 +29,14 @@ operations = {
 }
 
 def calculator():
-  num1 = int(input("What's the first number? \n"))
+  num1 = float(input("What's the first number? \n"))
   calculate_more = True
 
   while calculate_more:
     for key in operations:
       print(key)
     function = input("Which operation do you want to use? \n")
-    num2 = int(input("Enter a number \n"))
+    num2 = float(input("Enter a number \n"))
     calculate = operations[function]
     answer = calculate(num1, num2)
     print(f"{num1} {function} {num2} = {answer}")
